@@ -93,7 +93,7 @@ public class ShaderHelper {
         // Return the shader object ID.
         return shaderObjectId;
     }
-
+ 
     /**
      * Links a vertex shader and a fragment shader together into an OpenGL
      * program. Returns the OpenGL program object ID, or 0 if linking failed.
@@ -114,7 +114,7 @@ public class ShaderHelper {
         glAttachShader(programObjectId, vertexShaderId);
 
         // Attach the fragment shader to the program.
-        glAttachShader(programObjectId, fragmentShaderId);       
+        glAttachShader(programObjectId, fragmentShaderId);        
         
         // Link the two shaders together into a program.
         glLinkProgram(programObjectId);
@@ -127,7 +127,7 @@ public class ShaderHelper {
         if (LoggerConfig.ON) {
             // Print the program info log to the Android log output.
             Log.v(TAG, "Results of linking program:\n"
-                + glGetProgramInfoLog(programObjectId));			
+                + glGetProgramInfoLog(programObjectId));         
         }
         
         // Verify the link status.

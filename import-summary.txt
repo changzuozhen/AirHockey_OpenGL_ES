@@ -8,7 +8,7 @@ should evaluate whether these are still needed in your project and if
 so manually move them:
 
 * .gitignore
-* AirHockeyOrtho.iml
+* AirHockey3D.iml
 * proguard-project.txt
 
 Moved Files:
