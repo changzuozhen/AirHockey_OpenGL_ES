@@ -35,11 +35,13 @@ public class Mallet {
         vertexArray = new VertexArray(generatedData.vertexData);
         drawList = generatedData.drawList;
     }
+
     public void bindData(ColorShaderProgram colorProgram) {
         vertexArray.setVertexAttribPointer(0,
             colorProgram.getPositionAttributeLocation(),
             POSITION_COMPONENT_COUNT, 0);
     }
+
     public void draw() {
         for (DrawCommand drawCommand : drawList) {
             drawCommand.draw();

@@ -53,7 +53,7 @@ class ObjectBuilder {
 
         return builder.build();
     }
-    
+
     static GeneratedData createMallet(
         Point center, float radius, float height, int numPoints) {
         int size = sizeOfCircleInVertices(numPoints) * 2
@@ -126,15 +126,19 @@ class ObjectBuilder {
             vertexData[offset++] = 
                   circle.center.x 
                 + circle.radius * FloatMath.cos(angleInRadians);
+            
             vertexData[offset++] = circle.center.y;
+            
             vertexData[offset++] = 
                   circle.center.z 
                 + circle.radius * FloatMath.sin(angleInRadians);            
         }
+
         drawList.add(new DrawCommand() {
             @Override
             public void draw() {
-                glDrawArrays(GL_TRIANGLE_FAN, startVertex, numVertices);
+                glDrawArrays(GL_TRIANGLE_FAN, startVertex,
+                    numVertices);
             }
         });
     }
@@ -142,6 +146,7 @@ class ObjectBuilder {
     private void appendOpenCylinder(Cylinder cylinder, int numPoints) {
         final int startVertex = offset / FLOATS_PER_VERTEX;
         final int numVertices = sizeOfOpenCylinderInVertices(numPoints);
+
         final float yStart = cylinder.center.y - (cylinder.height / 2f);
         final float yEnd = cylinder.center.y + (cylinder.height / 2f);
 
@@ -169,10 +174,12 @@ class ObjectBuilder {
             vertexData[offset++] = yEnd;
             vertexData[offset++] = zPosition;
         }
+
         drawList.add(new DrawCommand() {
             @Override
             public void draw() {
-                glDrawArrays(GL_TRIANGLE_STRIP, startVertex, numVertices);
+                glDrawArrays(GL_TRIANGLE_STRIP, startVertex,
+                    numVertices);
             }
         });        
     }

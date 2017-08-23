@@ -28,6 +28,7 @@ public class Puck {
     public Puck(float radius, float height, int numPointsAroundPuck) {
         GeneratedData generatedData = ObjectBuilder.createPuck(new Cylinder(
             new Point(0f, 0f, 0f), radius, height), numPointsAroundPuck);
+
         this.radius = radius;
         this.height = height;
 
@@ -40,6 +41,7 @@ public class Puck {
             colorProgram.getPositionAttributeLocation(),
             POSITION_COMPONENT_COUNT, 0);
     }
+
     public void draw() {
         for (DrawCommand drawCommand : drawList) {
             drawCommand.draw();

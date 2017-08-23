@@ -22,7 +22,7 @@ public class ColorShaderProgram extends ShaderProgram {
     private final int uColorLocation;
     
     // Attribute locations
-    private final int aPositionLocation;    
+    private final int aPositionLocation;
 
     public ColorShaderProgram(Context context) {
         super(context, R.raw.simple_vertex_shader,

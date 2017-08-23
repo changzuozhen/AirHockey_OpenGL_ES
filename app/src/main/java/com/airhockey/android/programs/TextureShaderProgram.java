@@ -20,7 +20,7 @@ import android.content.Context;
 
 import com.airhockey.android.R;
 
-public class TextureShaderProgram extends ShaderProgram {    
+public class TextureShaderProgram extends ShaderProgram {
     // Uniform locations
     private final int uMatrixLocation;
     private final int uTextureUnitLocation;
