@@ -48,14 +48,12 @@ public class AirHockeyActivity extends Activity {
                   || Build.MODEL.contains("google_sdk")
                   || Build.MODEL.contains("Emulator")
                   || Build.MODEL.contains("Android SDK built for x86")));
-            
+
         if (supportsEs2) {
             // Request an OpenGL ES 2.0 compatible context.
             glSurfaceView.setEGLContextClientVersion(2);            
             
-            glSurfaceView.setEGLConfigChooser(8 , 8, 8, 8, 16, 0);
-            
-            // Assign our renderer.            
+            // Assign our renderer.
             glSurfaceView.setRenderer(new AirHockeyRenderer(this));
             rendererSet = true;
         } else {

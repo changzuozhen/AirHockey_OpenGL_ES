@@ -114,7 +114,7 @@ public class ShaderHelper {
         glAttachShader(programObjectId, vertexShaderId);
 
         // Attach the fragment shader to the program.
-        glAttachShader(programObjectId, fragmentShaderId);      
+        glAttachShader(programObjectId, fragmentShaderId);       
         
         // Link the two shaders together into a program.
         glLinkProgram(programObjectId);
