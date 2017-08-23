@@ -14,7 +14,7 @@ import static com.airhockey.android.Constants.BYTES_PER_FLOAT;
 import com.airhockey.android.data.VertexArray;
 import com.airhockey.android.programs.TextureShaderProgram;
 
-public class Table {
+public class Table {            
     private static final int POSITION_COMPONENT_COUNT = 2;
     private static final int TEXTURE_COORDINATES_COMPONENT_COUNT = 2;
     private static final int STRIDE = (POSITION_COMPONENT_COUNT 
@@ -50,8 +50,8 @@ public class Table {
             TEXTURE_COORDINATES_COMPONENT_COUNT, 
             STRIDE);
     }
-    
+        
     public void draw() {                                
         glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
-    }
+    }    
 }

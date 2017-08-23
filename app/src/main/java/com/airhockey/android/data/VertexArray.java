@@ -17,7 +17,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
-public class VertexArray {    
+public class VertexArray {
     private final FloatBuffer floatBuffer;
 
     public VertexArray(float[] vertexData) {
@@ -31,8 +31,8 @@ public class VertexArray {
     public void setVertexAttribPointer(int dataOffset, int attributeLocation,
         int componentCount, int stride) {        
         floatBuffer.position(dataOffset);        
-        glVertexAttribPointer(attributeLocation, componentCount, GL_FLOAT, 
-            false, stride, floatBuffer);
+        glVertexAttribPointer(attributeLocation, componentCount,
+            GL_FLOAT, false, stride, floatBuffer);
         glEnableVertexAttribArray(attributeLocation);
         
         floatBuffer.position(0);

@@ -47,12 +47,12 @@ public class AirHockeyActivity extends Activity {
                   || Build.FINGERPRINT.startsWith("unknown")
                   || Build.MODEL.contains("google_sdk")
                   || Build.MODEL.contains("Emulator")
-                  || Build.MODEL.contains("Android SDK built for x86")));
+                  || Build.MODEL.contains("Android SDK built for x86")));        
 
         if (supportsEs2) {
             // Request an OpenGL ES 2.0 compatible context.
-            glSurfaceView.setEGLContextClientVersion(2);            
-            
+            glSurfaceView.setEGLContextClientVersion(2);
+
             // Assign our renderer.
             glSurfaceView.setRenderer(new AirHockeyRenderer(this));
             rendererSet = true;
@@ -73,7 +73,7 @@ public class AirHockeyActivity extends Activity {
             Toast.makeText(this, "This device does not support OpenGL ES 2.0.",
                 Toast.LENGTH_LONG).show();
             return;
-        }
+        }       
 
         setContentView(glSurfaceView);
     }
